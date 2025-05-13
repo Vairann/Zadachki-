@@ -1,4 +1,8 @@
 vvod =(input().strip())
-print(vvod)
-result = eval(vvod)
-print (f"Результат : {result}")
+try:
+    result = eval(vvod)
+    print (f"Результат : {result}")
+except ZeroDivisionError:
+    print ("Ошибка делеления на ноль")
+except NameError:
+    print("Неверный ввод")        
